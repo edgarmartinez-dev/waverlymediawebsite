@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -38,11 +38,17 @@
       <g id="i-sun" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="4"/><path d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.6 5.6l1.5 1.5M16.9 16.9l1.5 1.5M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5"/>
       </g>
-      <g id="i-star" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 4.5l2.3 4.6 5.1.8-3.7 3.6.9 5-4.6-2.4-4.6 2.4.9-5L4.6 9.9l5.1-.8z"/>
+      <g id="i-download" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 4v10M8 11l4 3 4-3"/><path d="M5 18h14"/>
       </g>
     </defs>
   </svg>
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="topbar">
+    <span>New release — <strong>Meow Love: Super Cute Cat Coloring Book</strong> is here.</span>
+    <a href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">Get it on Amazon →</a>
+  </div>
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="top">
@@ -53,8 +59,8 @@
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#books">Books</a>
+        <a href="#freebies">Free Pages</a>
         <a href="#about">The Author</a>
-        <a href="#why">Why You'll Love Them</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="btn btn--small" href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">Shop on Amazon</a>
@@ -72,7 +78,7 @@
     <div class="hero__inner">
       <div class="hero__text">
         <p class="eyebrow">Coloring books for kids &amp; grown-ups</p>
-        <h1 class="hero__title">Color Your World with <span class="hl">Katherine&nbsp;Waverly</span></h1>
+        <h1 class="hero__title">Color your world with <em>Katherine&nbsp;Waverly</em></h1>
         <p class="hero__lede">
           Cozy, super-cute coloring books packed with friendly animals, holiday cheer,
           and feel-good fun — made for little artists and the grown-ups who color alongside them.
@@ -82,7 +88,7 @@
             Shop the Books on Amazon
             <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M5 12h12.17l-4.58-4.59L14 6l7 7-7 7-1.41-1.41L17.17 14H5z"/></svg>
           </a>
-          <a class="btn btn--ghost btn--lg" href="#books">See All Titles</a>
+          <a class="btn btn--ghost btn--lg" href="#freebies">Get Free Coloring Pages</a>
         </div>
         <p class="hero__meta"><span class="stars">★★★★★</span> Loved by families · Paperback &amp; Kindle · Free with Kindle Unlimited</p>
       </div>
@@ -116,11 +122,46 @@
     <div class="strip__item"><svg class="strip__icon" viewBox="0 0 24 24"><use href="#i-box"/></svg><strong>On Amazon</strong><span>Prime delivery available</span></div>
   </section>
 
+  <!-- ============ FEATURED BOOK (editorial spotlight) ============ -->
+  <section class="spotlight">
+    <div class="spotlight__inner">
+      <a href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener" class="cover cover--easter spotlight__cover">
+        <span class="cover__kicker">Coloring Book</span>
+        <span class="cover__title">Cozy Easter</span>
+        <svg class="cover__motif" viewBox="0 0 64 52" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 20C22 8 18 5 18 5c-4 6-3 15 1 19"/>
+            <path d="M40 20C42 8 46 5 46 5c4 6 3 15-1 19"/>
+            <ellipse cx="32" cy="33" rx="14" ry="16"/>
+            <path d="M19 31q6 5 13 0 6-5 13 0"/>
+            <circle cx="27" cy="30" r="1.5" fill="currentColor" stroke="none"/>
+            <circle cx="37" cy="30" r="1.5" fill="currentColor" stroke="none"/>
+          </g>
+        </svg>
+        <span class="cover__author">Katherine Waverly</span>
+      </a>
+      <div class="spotlight__text">
+        <p class="eyebrow">Reader Favorite</p>
+        <h2 class="section__title">Cozy Easter Coloring Book</h2>
+        <p class="spotlight__meta"><span class="pill">Ages 4+</span><span class="pill">Kids &amp; Adults</span><span class="pill">Paperback &amp; Kindle</span></p>
+        <p class="spotlight__desc">
+          Cute spring animals, Easter eggs, and bunny scenes for relaxation and stress relief.
+          Big, friendly outlines make it a joy for little hands and a calming treat for grown-ups —
+          the perfect basket-filler and rainy-afternoon activity.
+        </p>
+        <div class="spotlight__actions">
+          <a class="btn btn--pink" href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">Buy on Amazon</a>
+          <a class="btn btn--ghost" href="#freebies">Try a Free Page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ BOOKS ============ -->
   <section class="section" id="books">
     <div class="section__head">
       <p class="eyebrow eyebrow--center">The Collection</p>
-      <h2 class="section__title">Pick Your Next Coloring Adventure</h2>
+      <h2 class="section__title">Pick your next coloring adventure</h2>
       <p class="section__sub">Tap any book to read more and grab your copy on Amazon.</p>
     </div>
 
@@ -145,7 +186,7 @@
         </a>
         <div class="card__body">
           <h3 class="card__title">Cozy Easter Coloring Book</h3>
-          <p class="card__genre">For Kids &amp; Adults</p>
+          <p class="card__meta">Ages 4+ · Kids &amp; Adults</p>
           <p class="card__desc">Cute spring animals, Easter eggs, and bunny scenes for relaxation and stress relief.</p>
           <a class="card__link" href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">View on Amazon →</a>
         </div>
@@ -168,7 +209,7 @@
         </a>
         <div class="card__body">
           <h3 class="card__title">Advent Calendar Christmas Coloring Book</h3>
-          <p class="card__genre">Holiday · Vol. 1 &amp; 2</p>
+          <p class="card__meta">All Ages · Holiday · Vol. 1 &amp; 2</p>
           <p class="card__desc">Count down to Christmas with festive friends, cozy sweaters, and merry holiday scenes.</p>
           <a class="card__link" href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">View on Amazon →</a>
         </div>
@@ -193,7 +234,7 @@
         </a>
         <div class="card__body">
           <h3 class="card__title">Meow Love: Super Cute Cat Coloring Book</h3>
-          <p class="card__genre">For Cat Lovers</p>
+          <p class="card__meta">Ages 3+ · For Cat Lovers</p>
           <p class="card__desc">Adorable kitties, cozy picnics, and heart-warming scenes to color and treasure.</p>
           <a class="card__link" href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">View on Amazon →</a>
         </div>
@@ -203,11 +244,35 @@
     <p class="grid__more">More cozy titles on the way — <a href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">see the full author page on Amazon →</a></p>
   </section>
 
+  <!-- ============ FREE COLORING PAGES ============ -->
+  <section class="section section--free" id="freebies">
+    <div class="section__head">
+      <p class="eyebrow eyebrow--center">Free to Print</p>
+      <h2 class="section__title">Free coloring pages</h2>
+      <p class="section__sub">A little taste of every book — download, print, and start coloring today.</p>
+    </div>
+    <div class="free">
+      <a class="free__card" href="#" aria-label="Download the Easter sample page">
+        <span class="free__thumb cover--easter"><svg class="free__motif" viewBox="0 0 64 52"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 20C22 8 18 5 18 5c-4 6-3 15 1 19"/><path d="M40 20C42 8 46 5 46 5c4 6 3 15-1 19"/><ellipse cx="32" cy="33" rx="14" ry="16"/><path d="M19 31q6 5 13 0 6-5 13 0"/></g></svg></span>
+        <span class="free__body"><strong>Easter Bunny Page</strong><span class="free__dl"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Download PDF</span></span>
+      </a>
+      <a class="free__card" href="#" aria-label="Download the Christmas sample page">
+        <span class="free__thumb cover--xmas"><svg class="free__motif" viewBox="0 0 64 52"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6 L21 24 H27 L17 40 H47 L37 24 H43 Z"/><rect x="28" y="40" width="8" height="6"/></g></svg></span>
+        <span class="free__body"><strong>Christmas Tree Page</strong><span class="free__dl"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Download PDF</span></span>
+      </a>
+      <a class="free__card" href="#" aria-label="Download the cat sample page">
+        <span class="free__thumb cover--meow"><svg class="free__motif" viewBox="0 0 64 50"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18 L12 6 L23 13"/><path d="M48 18 L52 6 L41 13"/><circle cx="32" cy="29" r="15"/><path d="M32 31v2.5"/><path d="M28 35q4 3 8 0"/></g></svg></span>
+        <span class="free__body"><strong>Cuddly Cat Page</strong><span class="free__dl"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Download PDF</span></span>
+      </a>
+    </div>
+    <p class="quotes__note">Sample pages are placeholders — drop in real printable PDFs anytime.</p>
+  </section>
+
   <!-- ============ WHY ============ -->
   <section class="section section--why" id="why">
     <div class="section__head">
       <p class="eyebrow eyebrow--center">Why You'll Love Them</p>
-      <h2 class="section__title">Made to Be Colored, Loved &amp; Shared</h2>
+      <h2 class="section__title">Made to be colored, loved &amp; shared</h2>
     </div>
     <div class="feat">
       <div class="feat__item">
@@ -262,7 +327,7 @@
   <section class="section section--praise" id="praise">
     <div class="section__head">
       <p class="eyebrow eyebrow--center">Happy Colorists</p>
-      <h2 class="section__title">What Readers Are Saying</h2>
+      <h2 class="section__title">What readers are saying</h2>
     </div>
     <div class="quotes">
       <figure class="quote">
@@ -290,7 +355,7 @@
     <span class="confetti c2" aria-hidden="true"></span>
     <span class="confetti c3" aria-hidden="true"></span>
     <div class="cta__inner">
-      <h2>Ready to Start Coloring?</h2>
+      <h2>Ready to start coloring?</h2>
       <p>Every title is available on Amazon in paperback and Kindle — many free with Kindle Unlimited.</p>
       <a class="btn btn--white btn--lg" href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">Find the Books on Amazon</a>
     </div>
@@ -300,7 +365,7 @@
   <section class="section" id="contact">
     <div class="newsletter">
       <div class="newsletter__text">
-        <h2 class="section__title">Join the Coloring Club</h2>
+        <h2 class="section__title">Join the coloring club</h2>
         <p>Be first to hear about new books, free pages, and seasonal releases from Katherine Waverly.</p>
       </div>
       <form class="newsletter__form" onsubmit="return false;">
@@ -320,8 +385,8 @@
       </div>
       <nav class="footer__links" aria-label="Footer">
         <a href="#books">Books</a>
+        <a href="#freebies">Free Pages</a>
         <a href="#about">The Author</a>
-        <a href="#why">Why You'll Love Them</a>
         <a href="https://a.co/d/03UxLmA0" target="_blank" rel="noopener">Amazon</a>
       </nav>
       <p class="footer__copy">© <span id="year"></span> Waverly Media · Books by Katherine Waverly</p>
