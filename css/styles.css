@@ -113,14 +113,15 @@ a { color: inherit; text-decoration: none; }
 .hero__art { position: relative; display: grid; place-items: center; }
 .cover {
   position: relative; width: 300px; aspect-ratio: 1 / 1; border-radius: 18px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;
-  padding: 1.6rem; text-align: center; color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.45rem;
+  padding: 1.8rem; text-align: center; color: #fff;
   box-shadow: 0 26px 50px -18px rgba(58,53,80,0.5), inset 0 0 0 6px rgba(255,255,255,0.5);
   border: 1px solid rgba(255,255,255,0.4);
 }
+.cover__kicker { font-family: var(--body); font-weight: 700; font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.85; }
 .cover__title { font-family: var(--display); font-weight: 800; font-size: 2.2rem; line-height: 1; text-shadow: 2px 2px 0 rgba(0,0,0,0.18); }
-.cover__sub { font-family: var(--display); font-weight: 700; font-size: 1.05rem; text-shadow: 1px 1px 0 rgba(0,0,0,0.15); }
-.cover__scene { font-size: 2.6rem; margin: 0.4rem 0; }
+.cover__sub { font-family: var(--display); font-weight: 700; font-size: 1.02rem; line-height: 1.15; text-shadow: 1px 1px 0 rgba(0,0,0,0.15); }
+.cover__motif { width: 96px; height: 78px; color: rgba(255,255,255,0.92); margin: 0.5rem 0; filter: drop-shadow(1px 2px 1px rgba(0,0,0,0.18)); }
 .cover__author { font-family: var(--display); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.06em; opacity: 0.95; }
 .cover--meow { background: linear-gradient(165deg, #3b4a86 0%, #5a6bb5 45%, #8a6bb5 100%); }
 .cover--easter { background: linear-gradient(165deg, #a7e3a0 0%, #7cd6a3 50%, #5ec5e8 100%); }
@@ -128,15 +129,17 @@ a { color: inherit; text-decoration: none; }
 .cover--float { animation: float 4.5s ease-in-out infinite; }
 @keyframes float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-14px) rotate(2deg); } }
 
-.sticker { position: absolute; display: grid; place-items: center; border-radius: 50%; font-weight: 800; color: #fff; box-shadow: 0 8px 18px -6px rgba(58,53,80,0.5); }
-.sticker--star { width: 64px; height: 64px; background: var(--sun); color: #fff; font-size: 1.8rem; top: 4%; left: 2%; transform: rotate(-12deg); }
-.sticker--heart { width: 54px; height: 54px; background: var(--coral); font-size: 1.5rem; bottom: 6%; right: 4%; }
+.sticker { position: absolute; display: grid; place-items: center; box-shadow: 0 10px 20px -6px rgba(58,53,80,0.45); }
+.sticker--rating { background: #fff; color: var(--sun); padding: 0.5rem 0.9rem; border-radius: 100px; bottom: 4%; right: -4%; transform: rotate(-4deg); }
+.stars { color: var(--sun); letter-spacing: 0.06em; }
+.stars--sm { font-size: 0.95rem; }
+.hero__meta .stars { margin-right: 0.4rem; }
 
 /* ---------- Trust strip ---------- */
 .strip { background: #fff; border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); }
 .strip__item { padding: 1.5rem 1rem; text-align: center; border-right: 2px solid var(--line); display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
 .strip__item:last-child { border-right: none; }
-.strip__emoji { font-size: 1.7rem; }
+.strip__icon { width: 30px; height: 30px; color: var(--pink); margin-bottom: 0.2rem; }
 .strip__item strong { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 1.05rem; }
 .strip__item span:last-child { font-size: 0.85rem; color: var(--muted); }
 
@@ -166,7 +169,8 @@ a { color: inherit; text-decoration: none; }
 .feat { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem; }
 .feat__item { background: var(--cream); border: 2px solid var(--line); border-radius: var(--radius); padding: 1.8rem 1.4rem; text-align: center; transition: transform 0.2s; }
 .feat__item:hover { transform: translateY(-5px); }
-.feat__icon { font-size: 2.4rem; display: block; margin-bottom: 0.6rem; }
+.feat__icon { display: inline-grid; place-items: center; width: 60px; height: 60px; margin-bottom: 0.9rem; border-radius: 50%; background: linear-gradient(160deg, #ffe3ef, #e3f4fb); color: var(--pink); }
+.feat__icon svg { width: 30px; height: 30px; }
 .feat__item h3 { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 1.2rem; margin-bottom: 0.4rem; }
 .feat__item p { font-size: 0.94rem; color: var(--muted); }
 
@@ -175,7 +179,7 @@ a { color: inherit; text-decoration: none; }
 .about__inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3.5rem; align-items: center; padding: 5.5rem 1.5rem; }
 .about__photo { position: relative; }
 .about__portrait { aspect-ratio: 4 / 5; border-radius: var(--radius); background: linear-gradient(160deg, #fff, #ffeef6); border: 3px solid #fff; box-shadow: 0 24px 44px -22px rgba(58,53,80,0.5); display: grid; place-items: center; color: var(--muted); font-family: var(--display); font-weight: 700; font-size: 1.2rem; text-align: center; }
-.about__pawmark { position: absolute; bottom: -16px; right: -10px; font-size: 2.4rem; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 10px 20px -8px rgba(58,53,80,0.4); }
+.about__pawmark { position: absolute; bottom: -18px; right: -12px; width: 64px; height: 64px; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 10px 20px -8px rgba(58,53,80,0.4); }
 .about__text p { margin-bottom: 1.1rem; }
 .about__quote { font-family: var(--display); font-weight: 600; font-style: italic; font-size: 1.35rem; line-height: 1.4; color: var(--sky-deep); border-left: 5px solid var(--pink); padding-left: 1.3rem; margin-top: 1.4rem; }
 
